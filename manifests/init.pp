@@ -67,6 +67,7 @@ class dovecot (
     $lda_mail_plugins              = undef,
     # 20-imap.conf
     $mail_max_userip_connections   = undef,
+    $imap_mail_plugins             = undef,
     # 20-lmtp.conf
     $lmtp_mail_plugins             = undef,
     # 90-sieve.conf
