@@ -44,6 +44,7 @@ class dovecot (
     $mail_nfs_index                = undef,
     $first_valid_uid               = false,
     $last_valid_uid                = false,
+    $mdbox_rotate_size             = undef,
     # 10-master.conf
     $default_process_limit         = undef,
     $default_client_limit          = undef,
