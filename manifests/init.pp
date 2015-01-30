@@ -75,6 +75,9 @@ class dovecot (
     $sieve_dir                     = '~/sieve',
     $sieve_global_dir              = undef,
     $sieve_extensions              = undef,
+    # 90-plugin.conf
+    $plugin_mail_plugins           = undef,
+    $plugin_conf                   = {},
     # auth-sql.conf.ext
     $auth_sql_userdb_static        = undef,
     # auth-system.conf.ext
@@ -183,6 +186,9 @@ class dovecot (
     }
     file { '/etc/dovecot/conf.d/90-sieve.conf':
         content => template('dovecot/conf.d/90-sieve.conf.erb'),
+    }
+    file { '/etc/dovecot/conf.d/90-plugin.conf':
+        content => template('dovecot/conf.d/90-plugin.conf.erb'),
     }
     file { '/etc/dovecot/conf.d/auth-sql.conf.ext':
         content => template('dovecot/conf.d/auth-sql.conf.ext.erb'),

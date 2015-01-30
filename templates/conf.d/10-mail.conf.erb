@@ -371,6 +371,9 @@ last_valid_uid = <%= @last_valid_uid %>
 
 # Maximum dbox file size until it's rotated.
 #mdbox_rotate_size = 2M
+<% if @mdbox_rotate_size -%>
+mdbox_rotate_size = <%= @mdbox_rotate_size %>
+<% end -%>
 
 # Maximum dbox file age until it's rotated. Typically in days. Day begins
 # from midnight, so 1d = today, 2d = yesterday, etc. 0 = check disabled.

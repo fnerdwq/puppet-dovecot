@@ -8,6 +8,13 @@
 # settings take effect. See <doc/wiki/Plugins.txt> for list of plugins and
 # their configuration. Note that %variable expansion is done for all values.
 
+<% if @plugin_mail_plugins -%>
+mail_plugins = <%= @plugin_mail_plugins  %>
+<% end -%>
+
 plugin {
   #setting_name = value
+<% @plugin_conf.each do |key,val| -%>
+  <%= "#{key} =  #{val}" %>
+<% end -%>
 }
