@@ -2,4 +2,4 @@ pkg
 *~
 *.swp
 *.bak
-
+.project
