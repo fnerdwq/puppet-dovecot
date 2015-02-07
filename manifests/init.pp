@@ -44,6 +44,7 @@ class dovecot (
     $mail_nfs_index                = undef,
     $first_valid_uid               = false,
     $last_valid_uid                = false,
+    $mail_plugins                  = undef,
     $mdbox_rotate_size             = undef,
     # 10-master.conf
     $default_process_limit         = undef,
@@ -77,7 +78,6 @@ class dovecot (
     $sieve_global_dir              = undef,
     $sieve_extensions              = undef,
     # 90-plugin.conf
-    $plugin_mail_plugins           = undef,
     $plugin_conf                   = {},
     # auth-sql.conf.ext
     $auth_sql_userdb_static        = undef,
